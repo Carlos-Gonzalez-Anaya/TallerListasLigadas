@@ -243,8 +243,6 @@ public class DoubleLinkedList<T> : ILinkedList<T> where T : IComparable<T>
         return result.TrimEnd();
     }
 
-    
-
     public override string ToString()
     {
         var current = _head;
