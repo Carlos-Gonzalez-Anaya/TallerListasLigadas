@@ -220,31 +220,27 @@ public class DoubleLinkedList<T> : ILinkedList<T> where T : IComparable<T>
 
     public override string ToString()
     {
-        if (_head == null) return "(lista vacía)";
-
         var current = _head;
         var result = string.Empty;
         while (current != null)
         {
-            result += current.Data;
-            if (current.Next != null) result += " <-> ";
+            result += $"{current.Data} <-> ";
             current = current.Next;
         }
+        result += "null";
         return result;
     }
 
     public string ToStringReverse()
     {
-        if (_tail == null) return "(lista vacía)";
-
         var current = _tail;
         var result = string.Empty;
         while (current != null)
         {
-            result += current.Data;
-            if (current.Previous != null) result += " <-> ";
+            result += $"{current.Data} <-> ";
             current = current.Previous;
         }
+        result += "null";
         return result;
     }
 
